@@ -28,9 +28,6 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: {
-                localIdentName: '[name]__[local]___[hash:base64:5]',
-              },
               sourceMap: true,
             },
           },
@@ -38,7 +35,10 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [['autoprefixer', {}]],
+                plugins: [
+                  ['tailwindcss', {}],
+                  ['autoprefixer', {}],
+                ],
               },
             },
           },
